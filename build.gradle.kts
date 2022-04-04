@@ -28,6 +28,9 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("io.github.resilience4j:resilience4j-kotlin:1.7.0")
+	implementation("io.github.resilience4j:resilience4j-spring-boot2:1.7.0")
+	implementation("org.springframework.boot:spring-boot-starter-aop")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
