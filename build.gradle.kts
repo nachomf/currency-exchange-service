@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.buildpack.platform.build.PullPolicy
 
 plugins {
 	id("org.springframework.boot") version "2.6.4"
@@ -54,6 +55,12 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs = listOf("-Xjsr305=strict")
 		jvmTarget = "11"
 	}
+}
+
+//create docker image with command ./gradlew bootBuildImage
+tasks.named<org.springframework.boot.gradle.tasks.bundling.BootBuildImage>("bootBuildImage"){
+	imageName = "nachoemf/mmv2-${project.name}:${project.version}"
+	pullPolicy = PullPolicy.IF_NOT_PRESENT
 }
 
 tasks.withType<Test> {
