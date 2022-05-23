@@ -22,17 +22,25 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("com.h2database:h2")
-	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-	implementation("org.springframework.cloud:spring-cloud-starter-config")
-	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
-	implementation("io.github.resilience4j:resilience4j-kotlin:1.7.0")
-	implementation("io.github.resilience4j:resilience4j-spring-boot2:1.7.0")
 	implementation("org.springframework.boot:spring-boot-starter-aop")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+
+	implementation("com.h2database:h2")
+	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+
+	implementation("org.jetbrains.kotlin:kotlin-reflect")
+	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+
+	implementation("org.springframework.cloud:spring-cloud-starter-config")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-sleuth")
+	implementation("org.springframework.cloud:spring-cloud-sleuth-zipkin")
+
+	//implementation("org.springframework.amqp:spring-rabbit")
+
+	implementation("io.github.resilience4j:resilience4j-kotlin:1.7.0")
+	implementation("io.github.resilience4j:resilience4j-spring-boot2:1.7.0")
 }
 
 dependencyManagement {
